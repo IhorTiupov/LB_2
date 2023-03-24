@@ -24,7 +24,11 @@ public:
             m_arr[m_currSize++] = value;
         }
     }
-
+    ~List() 
+    {
+        delete[]m_arr;
+        m_arr = nullptr;
+    }
 private:
     T*  m_arr;
     int m_sizeArr;
